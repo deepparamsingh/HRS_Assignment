@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.11.8 on win32)" generated="2024-04-02T21:11:37.078030" rpa="false" schemaversion="5">
+<suite id="s1" name="LandingPageTest" source="D:\HRS\TestPage\LandingPageTest.robot">
+<kw name="Get Current Date and Time" owner="Generic" type="SETUP">
+<kw name="Fix the column number" owner="Generic">
+<kw name="Catenate" owner="BuiltIn">
+<msg time="2024-04-02T21:11:38.157099" level="INFO">${pageHeading} = 2</msg>
+<var>${pageHeading}</var>
+<arg>2</arg>
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<status status="PASS" start="2024-04-02T21:11:38.156060" elapsed="0.001039"/>
+</kw>
+<kw name="Set Global Variable" owner="BuiltIn">
+<msg time="2024-04-02T21:11:38.158130" level="INFO">${pageHeading} = 2</msg>
+<arg>${pageHeading}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="PASS" start="2024-04-02T21:11:38.157099" elapsed="0.001031"/>
+</kw>
+<status status="PASS" start="2024-04-02T21:11:38.155024" elapsed="0.003106"/>
+</kw>
+<kw name="Fix the row number" owner="Generic">
+<kw name="Catenate" owner="BuiltIn">
+<msg time="2024-04-02T21:11:38.159127" level="INFO">${pageTime} = 3</msg>
+<var>${pageTime}</var>
+<arg>3</arg>
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<status status="PASS" start="2024-04-02T21:11:38.158130" elapsed="0.000997"/>
+</kw>
+<kw name="Set Global Variable" owner="BuiltIn">
+<msg time="2024-04-02T21:11:38.159650" level="INFO">${pageTime} = 3</msg>
+<arg>${pageTime}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="PASS" start="2024-04-02T21:11:38.159127" elapsed="0.000523"/>
+</kw>
+<status status="PASS" start="2024-04-02T21:11:38.158130" elapsed="0.001520"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-04-02T21:11:38.159650" level="INFO">${current_date} = 2024-04-02</msg>
+<var>${current_date}</var>
+<arg>datetime.datetime.now().strftime("%Y-%m-%d")</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-04-02T21:11:38.159650" elapsed="0.000000"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-04-02T21:11:38.160677" level="INFO">${current_time} = 21:11:38</msg>
+<var>${current_time}</var>
+<arg>datetime.datetime.now().strftime("%H:%M:%S")</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-04-02T21:11:38.160677" elapsed="0.000000"/>
+</kw>
+<kw name="Catenate" owner="BuiltIn">
+<msg time="2024-04-02T21:11:38.160677" level="INFO">${current_Date_Time} = 2024-04-02_21:11:38</msg>
+<var>${current_Date_Time}</var>
+<arg>${current_date}_${current_time}</arg>
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<status status="PASS" start="2024-04-02T21:11:38.160677" elapsed="0.000000"/>
+</kw>
+<kw name="Calculate Running time" owner="Generic">
+<kw name="Close All Excel Documents" owner="ExcelLibrary">
+<doc>Closes all opened documents.</doc>
+<status status="PASS" start="2024-04-02T21:11:38.161716" elapsed="0.000000"/>
+</kw>
+<kw name="Open Excel Document" owner="ExcelLibrary">
+<arg>${SheetLocationAndName}</arg>
+<arg>doc_id=1</arg>
+<doc>Opens xlsx document file.</doc>
+<status status="PASS" start="2024-04-02T21:11:38.162756" elapsed="0.033123"/>
+</kw>
+<kw name="Write Excel Cell" owner="ExcelLibrary">
+<arg>${RowNum_forText}</arg>
+<arg>${ColumnNum_forText}</arg>
+<arg>${module_name}</arg>
+<arg>${SheetTabName}</arg>
+<doc>Writes value to the cell.</doc>
+<status status="PASS" start="2024-04-02T21:11:38.195879" elapsed="0.001010"/>
+</kw>
+<kw name="Write Excel Cell" owner="ExcelLibrary">
+<arg>${RowNum}</arg>
+<arg>${ColumnNum}</arg>
+<arg>${TimeTakenToLoginPage}</arg>
+<arg>${SheetTabName}</arg>
+<doc>Writes value to the cell.</doc>
+<status status="PASS" start="2024-04-02T21:11:38.196889" elapsed="0.000000"/>
+</kw>
+<kw name="Save Excel Document" owner="ExcelLibrary">
+<arg>${SheetLocationAndName}</arg>
+<doc>Saves the current document to disk.</doc>
+<status status="PASS" start="2024-04-02T21:11:38.196889" elapsed="0.035228"/>
+</kw>
+<kw name="Close All Excel Documents" owner="ExcelLibrary">
+<doc>Closes all opened documents.</doc>
+<status status="PASS" start="2024-04-02T21:11:38.232117" elapsed="0.000000"/>
+</kw>
+<arg>1</arg>
+<arg>${pageHeading}</arg>
+<arg>Generic - Module name</arg>
+<arg>1</arg>
+<arg>${pageTime}</arg>
+<arg>${current_Date_Time}</arg>
+<arg>Load_Time_tracking</arg>
+<status status="PASS" start="2024-04-02T21:11:38.161716" elapsed="0.070401"/>
+</kw>
+<status status="PASS" start="2024-04-02T21:11:38.153993" elapsed="0.078124"/>
+</kw>
+<test id="s1-t1" name="Validate Succesful Login" line="42">
+<kw name="open the browser with the url" owner="Generic" type="SETUP">
+<kw name="Fix the column number" owner="Generic">
+<kw name="Catenate" owner="BuiltIn">
+<msg time="2024-04-02T21:11:38.234165" level="INFO">${pageHeading} = 2</msg>
+<var>${pageHeading}</var>
+<arg>2</arg>
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<status status="PASS" start="2024-04-02T21:11:38.234165" elapsed="0.000000"/>
+</kw>
+<kw name="Set Global Variable" owner="BuiltIn">
+<msg time="2024-04-02T21:11:38.234165" level="INFO">${pageHeading} = 2</msg>
+<arg>${pageHeading}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="PASS" start="2024-04-02T21:11:38.234165" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-04-02T21:11:38.234165" elapsed="0.000000"/>
+</kw>
+<kw name="Fix the row number" owner="Generic">
+<kw name="Catenate" owner="BuiltIn">
+<msg time="2024-04-02T21:11:38.235196" level="INFO">${pageTime} = 3</msg>
+<var>${pageTime}</var>
+<arg>3</arg>
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<status status="PASS" start="2024-04-02T21:11:38.235196" elapsed="0.000000"/>
+</kw>
+<kw name="Set Global Variable" owner="BuiltIn">
+<msg time="2024-04-02T21:11:38.235196" level="INFO">${pageTime} = 3</msg>
+<arg>${pageTime}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="PASS" start="2024-04-02T21:11:38.235196" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-04-02T21:11:38.235196" elapsed="0.000000"/>
+</kw>
+<kw name="Get Current Time in Milliseconds" owner="Generic">
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-04-02T21:11:38.236217" level="INFO">${time_in_milliseconds} = 1712072498236</msg>
+<var>${time_in_milliseconds}</var>
+<arg>int(time.time() * 1000)</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-04-02T21:11:38.236217" elapsed="0.000000"/>
+</kw>
+<return>
+<value>${time_in_milliseconds}</value>
+<status status="PASS" start="2024-04-02T21:11:38.236217" elapsed="0.000000"/>
+</return>
+<msg time="2024-04-02T21:11:38.236217" level="INFO">${StartTime1} = 1712072498236</msg>
+<var>${StartTime1}</var>
+<status status="PASS" start="2024-04-02T21:11:38.236217" elapsed="0.000000"/>
+</kw>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-04-02T21:11:38.237238" level="INFO">Opening browser 'firefox' to base url 'https://www.hrs.de/'.</msg>
+<arg>${url}</arg>
+<arg>${browser_name}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-04-02T21:11:38.237238" elapsed="6.717627"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<msg time="2024-04-02T21:11:50.334679" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: WebDriver session does not exist, or is not active
+Stacktrace:
+RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8
+WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:192:5
+InvalidSessionIDError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:447:5
+assert.that/&lt;@chrome://remote/content/shared/webdriver/Assert.sys.mjs:485:13
+assert.session@chrome://remote/content/shared/webdriver/Assert.sys.mjs:37:4
+despatch@chrome://remote/content/marionette/server.sys.mjs:315:19
+execute@chrome://remote/content/marionette/server.sys.mjs:289:16
+onPacket/&lt;@chrome://remote/content/marionette/server.sys.mjs:262:20
+onPacket@chrome://remote/content/marionette/server.sys.mjs:263:9
+_onJSONObjectReady/&lt;@chrome://remote/content/marionette/transport.sys.mjs:494:20
+</msg>
+<msg time="2024-04-02T21:11:50.335729" level="FAIL">NoSuchWindowException: Message: Browsing context has been discarded
+Stacktrace:
+RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8
+WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:192:5
+NoSuchWindowError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:678:5
+assert.that/&lt;@chrome://remote/content/shared/webdriver/Assert.sys.mjs:485:13
+assert.open@chrome://remote/content/shared/webdriver/Assert.sys.mjs:147:4
+GeckoDriver.prototype.findElements@chrome://remote/content/marionette/driver.sys.mjs:1584:15
+despatch@chrome://remote/content/marionette/server.sys.mjs:318:40
+execute@chrome://remote/content/marionette/server.sys.mjs:289:16
+onPacket/&lt;@chrome://remote/content/marionette/server.sys.mjs:262:20
+onPacket@chrome://remote/content/marionette/server.sys.mjs:263:9
+_onJSONObjectReady/&lt;@chrome://remote/content/marionette/transport.sys.mjs:494:20
+</msg>
+<arg>//a[normalize-space()='Login']</arg>
+<arg>60</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="FAIL" start="2024-04-02T21:11:44.955863" elapsed="5.387157">NoSuchWindowException: Message: Browsing context has been discarded
+Stacktrace:
+RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8
+WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:192:5
+NoSuchWindowError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:678:5
+assert.that/&lt;@chrome://remote/content/shared/webdriver/Assert.sys.mjs:485:13
+assert.open@chrome://remote/content/shared/webdriver/Assert.sys.mjs:147:4
+GeckoDriver.prototype.findElements@chrome://remote/content/marionette/driver.sys.mjs:1584:15
+despatch@chrome://remote/content/marionette/server.sys.mjs:318:40
+execute@chrome://remote/content/marionette/server.sys.mjs:289:16
+onPacket/&lt;@chrome://remote/content/marionette/server.sys.mjs:262:20
+onPacket@chrome://remote/content/marionette/server.sys.mjs:263:9
+_onJSONObjectReady/&lt;@chrome://remote/content/marionette/transport.sys.mjs:494:20
+</status>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>//a[normalize-space()='Login']</arg>
+<arg>60</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="NOT RUN" start="2024-04-02T21:11:50.343020" elapsed="0.000000"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="NOT RUN" start="2024-04-02T21:11:50.344017" elapsed="0.000000"/>
+</kw>
+<kw name="Get Current Time in Milliseconds" owner="Generic">
+<var>${EndTime1}</var>
+<status status="NOT RUN" start="2024-04-02T21:11:50.344017" elapsed="0.000000"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<var>${ActualTime}</var>
+<arg>${EndTime1}-${StartTime1}</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="NOT RUN" start="2024-04-02T21:11:50.344017" elapsed="0.000000"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Current Time in Milliseconds: ${ActualTime}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" start="2024-04-02T21:11:50.344017" elapsed="0.000000"/>
+</kw>
+<kw name="Calculate Running time" owner="Generic">
+<arg>2</arg>
+<arg>${pageHeading}</arg>
+<arg>Generic - open the browser with the url</arg>
+<arg>2</arg>
+<arg>${pageTime}</arg>
+<arg>${ActualTime}</arg>
+<arg>Load_Time_tracking</arg>
+<status status="NOT RUN" start="2024-04-02T21:11:50.345014" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2024-04-02T21:11:38.233117" elapsed="12.111897">NoSuchWindowException: Message: Browsing context has been discarded
+Stacktrace:
+RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8
+WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:192:5
+NoSuchWindowError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:678:5
+assert.that/&lt;@chrome://remote/content/shared/webdriver/Assert.sys.mjs:485:13
+assert.open@chrome://remote/content/shared/webdriver/Assert.sys.mjs:147:4
+GeckoDriver.prototype.findElements@chrome://remote/content/marionette/driver.sys.mjs:1584:15
+despatch@chrome://remote/content/marionette/server.sys.mjs:318:40
+execute@chrome://remote/content/marionette/server.sys.mjs:289:16
+onPacket/&lt;@chrome://remote/content/marionette/server.sys.mjs:262:20
+onPacket@chrome://remote/content/marionette/server.sys.mjs:263:9
+_onJSONObjectReady/&lt;@chrome://remote/content/marionette/transport.sys.mjs:494:20
+</status>
+</kw>
+<kw name="Close Browser session" owner="Generic" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-04-02T21:11:50.347164" elapsed="2.046158"/>
+</kw>
+<status status="PASS" start="2024-04-02T21:11:50.346147" elapsed="2.047175"/>
+</kw>
+<status status="FAIL" start="2024-04-02T21:11:38.233117" elapsed="14.160205">Setup failed:
+NoSuchWindowException: Message: Browsing context has been discarded
+Stacktrace:
+RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8
+WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:192:5
+NoSuchWindowError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:678:5
+assert.that/&lt;@chrome://remote/content/shared/webdriver/Assert.sys.mjs:485:13
+assert.open@chrome://remote/content/shared/webdriver/Assert.sys.mjs:147:4
+GeckoDriver.prototype.findElements@chrome://remote/content/marionette/driver.sys.mjs:1584:15
+despatch@chrome://remote/content/marionette/server.sys.mjs:318:40
+execute@chrome://remote/content/marionette/server.sys.mjs:289:16
+onPacket/&lt;@chrome://remote/content/marionette/server.sys.mjs:262:20
+onPacket@chrome://remote/content/marionette/server.sys.mjs:263:9
+_onJSONObjectReady/&lt;@chrome://remote/content/marionette/transport.sys.mjs:494:20
+</status>
+</test>
+<doc>Contains all test cases of Landing page</doc>
+<status status="FAIL" start="2024-04-02T21:11:37.080071" elapsed="15.315283"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="LandingPageTest">LandingPageTest</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2024-04-02T21:11:37.593669" level="WARN">Error in file 'D:\HRS\Pages\TechnologyPage.robot' on line 1444: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2024-04-02T21:11:50.334679" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: WebDriver session does not exist, or is not active
+Stacktrace:
+RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8
+WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:192:5
+InvalidSessionIDError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:447:5
+assert.that/&lt;@chrome://remote/content/shared/webdriver/Assert.sys.mjs:485:13
+assert.session@chrome://remote/content/shared/webdriver/Assert.sys.mjs:37:4
+despatch@chrome://remote/content/marionette/server.sys.mjs:315:19
+execute@chrome://remote/content/marionette/server.sys.mjs:289:16
+onPacket/&lt;@chrome://remote/content/marionette/server.sys.mjs:262:20
+onPacket@chrome://remote/content/marionette/server.sys.mjs:263:9
+_onJSONObjectReady/&lt;@chrome://remote/content/marionette/transport.sys.mjs:494:20
+</msg>
+</errors>
+</robot>

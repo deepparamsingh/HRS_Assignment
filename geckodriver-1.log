@@ -1,0 +1,41 @@
+1712068851771	geckodriver	INFO	Listening on 127.0.0.1:51590
+1712068854811	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "51591" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\PRAMDE~1\\AppData\\Local\\Temp\\rust_mozprofileej7YVA"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1712068855235	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1712068855339	Marionette	INFO	Listening on port 51657
+WebDriver BiDi listening on ws://127.0.0.1:51591
+Read port: 51657
+1712068855545	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:51591/devtools/browser/a43fdd93-7184-4b3a-a2f3-5bac186152ac
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://access.aithentic.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://access.aithentic.com."
+1712068863392	Marionette	INFO	Stopped listening on port 51657
+JavaScript warning: https://uat-app.aithentic.com/main.e2aa4a17f8f08858.js, line 1: Script terminated by timeout at:
+v_@https://uat-app.aithentic.com/main.e2aa4a17f8f08858.js:1:354758
+eg@https://uat-app.aithentic.com/main.e2aa4a17f8f08858.js:1:354824
+Yf@https://uat-app.aithentic.com/main.e2aa4a17f8f08858.js:1:354191
+B@https://uat-app.aithentic.com/main.e2aa4a17f8f08858.js:1:361202
+D@https://uat-app.aithentic.com/main.e2aa4a17f8f08858.js:1:363455
+ge@https://uat-app.aithentic.com/main.e2aa4a17f8f08858.js:1:365120
+ge@https://uat-app.aithentic.com/main.e2aa4a17f8f08858.js:1:368337
+ge@https://uat-app.aithentic.com/main.e2aa4a17f8f08858.js:1:368337
+ge@https://uat-app.aithentic.com/main.e2aa4a17f8f08858.js:1:368337
+Ae@https://uat-app.aithentic.com/main.e2aa4a17f8f08858.js:1:411964
+x9@https://uat-app.aithentic.com/main.e2aa4a17f8f08858.js:1:412843
+xa@https://uat-app.aithentic.com/main.e2aa4a17f8f08858.js:1:415650
+N2@https://uat-app.aithentic.com/main.e2aa4a17f8f08858.js:1:415754
+startRecording@https://uat-app.aithentic.com/main.e2aa4a17f8f08858.js:1:467156
+_initializeRecording@https://uat-app.aithentic.com/main.e2aa4a17f8f08858.js:1:471221
+initializeSampling@https://uat-app.aithentic.com/main.e2aa4a17f8f08858.js:1:465923
+_initialize@https://uat-app.aithentic.com/main.e2aa4a17f8f08858.js:1:482613
+8291/setupOnce/<@https://uat-app.aithentic.com/main.e2aa4a17f8f08858.js:1:482084
+8583/ge/s</</A[0]@https://uat-app.aithentic.com/polyfills.ddd7308883f5c217.js:1:28970
+invokeTask@https://uat-app.aithentic.com/polyfills.ddd7308883f5c217.js:1:7933
+runTask@https://uat-app.aithentic.com/polyfills.ddd7308883f5c217.js:1:3326
+invokeTask@https://uat-app.aithentic.com/polyfills.ddd7308883f5c217.js:1:8985
+8583/g/this.invoke<@https://uat-app.aithentic.com/polyfills.ddd7308883f5c217.js:1:8886
+8583/ge/u/g.args[0]@https://uat-app.aithentic.com/polyfills.ddd7308883f5c217.js:1:28682
+
+Dynamically enable window occlusion 1
