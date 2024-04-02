@@ -26,11 +26,12 @@ ${hamBurger}        //img[@alt='menu']
 
 
 ${search_location}      css:span[title='Location, hotel, region, address, post code']
+${input_location}      css:#DestinationSearchInput
 ${select_location}      (//li[contains(@class,'DestinationList_suggestionItem')])[1]
 ${date_Picker}      css:#DatePickerOpener
 ${next_month}       //div[contains(@class,'Calendar_monthsDesktop')]//img
 
-//div[contains(@class, 'Calendar_monthsDesktop')]//div[contains(@class, 'Month_title') and contains(text(), 'June')]
+${search_hotels}     //span[normalize-space()='Search hotels']
 
 *** Keywords ***
 
@@ -39,6 +40,7 @@ Accept cookies
     wait until element is visible   ${Accept_all_cookies}    60
     wait until element is enabled    ${Accept_all_cookies}    60
     Click Element       ${Accept_all_cookies}
+    sleep   ${search_sleep}
 
 Click on the menu option
     wait until element is visible    ${hamBurger}     60
@@ -60,12 +62,12 @@ Select the relevant language
 #English
 
 Enter the location
-    [Arguments]    ${option}        ${location}
+    [Arguments]     ${location}
     wait until element is visible   ${search_location}    60
     wait until element is enabled   ${search_location}     60
     Click Element       ${search_location}
-    Clear Element Text      ${search_location}
-    input text      ${search_location}     ${location}
+    Clear Element Text      ${input_location}
+    input text      ${input_location}    ${location}
 
 Select the location
     wait until element is visible   ${select_location}   60
@@ -81,3 +83,20 @@ Click next month to find date
     wait until element is visible   ${next_month}   60
     wait until element is enabled   ${next_month}     60
     Click Element        ${next_month}
+
+Select Start date of the month
+    [Arguments]    ${month}        ${date}
+    wait until element is visible   //div[contains(@class, 'Calendar_monthsDesktop')]//div[contains(@class, 'Month_container')]//div[contains(@class, 'Month_title')and contains(text(), '${month}')]//following::div[contains(@class,'Day_container')and contains(text(), '${date}')]   60
+    wait until element is enabled   //div[contains(@class, 'Calendar_monthsDesktop')]//div[contains(@class, 'Month_container')]//div[contains(@class, 'Month_title')and contains(text(), '${month}')]//following::div[contains(@class,'Day_container')and contains(text(), '${date}')]     60
+    Click Element        //div[contains(@class, 'Calendar_monthsDesktop')]//div[contains(@class, 'Month_container')]//div[contains(@class, 'Month_title')and contains(text(), '${month}')]//following::div[contains(@class,'Day_container')and contains(text(), '${date}')]
+
+Select end date of the month
+    [Arguments]    ${month}        ${date}
+    wait until element is visible   //div[contains(@class, 'Calendar_monthsDesktop')]//div[contains(@class, 'Month_container')]//div[contains(@class, 'Month_title')and contains(text(), '${month}')]//following::div[contains(@class,'Day_container')and contains(text(), '${date}')]   60
+    wait until element is enabled   //div[contains(@class, 'Calendar_monthsDesktop')]//div[contains(@class, 'Month_container')]//div[contains(@class, 'Month_title')and contains(text(), '${month}')]//following::div[contains(@class,'Day_container')and contains(text(), '${date}')]     60
+    Click Element        //div[contains(@class, 'Calendar_monthsDesktop')]//div[contains(@class, 'Month_container')]//div[contains(@class, 'Month_title')and contains(text(), '${month}')]//following::div[contains(@class,'Day_container')and contains(text(), '${date}')]
+
+Click on search hotels
+    wait until element is visible   ${search_hotels}   60
+    wait until element is enabled   ${search_hotels}     60
+    Click Element        ${search_hotels}

@@ -32,6 +32,7 @@ Validate Succesful Login
     HRSLandingPage.Select the location
     HRSLandingPage.Click on the datepicker
     HRSLandingPage.Click next month to find date
-    HRSLandingPage.
-    HRSLandingPage.
-
+    HRSLandingPage.Select Start date of the month     June    21
+    HRSLandingPage.Select end date of the month     June    27
+    HRSLandingPage.Click on search hotels
+    HRSGeneric.Verify your current page location contains       Recommendations
