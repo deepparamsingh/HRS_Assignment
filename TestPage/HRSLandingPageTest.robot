@@ -30,6 +30,8 @@ Validate Succesful Login
     HRSGeneric.Verify your current page location contains          language=en
     HRSLandingPage.Enter the location      Barcelona Catalonia
     HRSLandingPage.Select the location
+    HRSLandingPage.Click on the datepicker
+    HRSLandingPage.Click next month to find date
     HRSLandingPage.
     HRSLandingPage.
 

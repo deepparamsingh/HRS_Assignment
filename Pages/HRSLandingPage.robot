@@ -27,7 +27,10 @@ ${hamBurger}        //img[@alt='menu']
 
 ${search_location}      css:span[title='Location, hotel, region, address, post code']
 ${select_location}      (//li[contains(@class,'DestinationList_suggestionItem')])[1]
+${date_Picker}      css:#DatePickerOpener
 ${next_month}       //div[contains(@class,'Calendar_monthsDesktop')]//img
+
+//div[contains(@class, 'Calendar_monthsDesktop')]//div[contains(@class, 'Month_title') and contains(text(), 'June')]
 
 *** Keywords ***
 
@@ -68,3 +71,13 @@ Select the location
     wait until element is visible   ${select_location}   60
     wait until element is enabled   ${select_location}     60
     Click Element        ${select_location}
+
+Click on the datepicker
+    wait until element is visible   ${date_Picker}   60
+    wait until element is enabled   ${date_Picker}     60
+    Click Element        ${date_Picker}
+
+Click next month to find date
+    wait until element is visible   ${next_month}   60
+    wait until element is enabled   ${next_month}     60
+    Click Element        ${next_month}
