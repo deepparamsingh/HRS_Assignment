@@ -14,29 +14,57 @@ Resource        ../Pages/HRSLandingPage.robot
 
 *** Variables ***
 ${Accept_all_cookies}      css:#onetrust-accept-btn-handler
-${Ccookies_settings}      css:#onetrust-pc-btn-handler
+${Cookies_settings}      css:#onetrust-pc-btn-handler
 ${login}        //img[contains(@alt,'login')]//preceding-sibling::span
 ${userEmail}        css:#email
 ${userPass}     css:#password
 ${loginButton}      //button[contains(@class,'Button_Primary')]//span[normalize-space()='Log in']
 
 
+${hamBurger}        //img[@alt='menu']
 
 
+
+${search_location}      css:span[title='Location, hotel, region, address, post code']
+${select_location}      (//li[contains(@class,'DestinationList_suggestionItem')])[1]
+${next_month}       //div[contains(@class,'Calendar_monthsDesktop')]//img
 
 *** Keywords ***
 
-Fill the login Form
-    [Arguments]     ${email}     ${valid_password}
-    wait until element is visible    ${Kc_username}       60
-    Input Text          ${Kc_username}     ${email}
-    wait until element is visible    ${Kc_password}    60
-    Input Password      ${Kc_password}     ${valid_password}
-    Click Button        ${Kc_loginBtn}
-#    wait until location contains    asset-overview     60
-#    wait until element is visible       ${profileName}       60
 
+Accept cookies
+    wait until element is visible   ${Accept_all_cookies}    60
+    wait until element is enabled    ${Accept_all_cookies}    60
+    Click Element       ${Accept_all_cookies}
 
+Click on the menu option
+    wait until element is visible    ${hamBurger}     60
+    wait until element is enabled    ${hamBurger}     60
+    Click Element        ${hamBurger}
 
+Click on change language option
+    [Arguments]    ${option}
+    wait until element is visible   //span[normalize-space()='${option}']    60
+    wait until element is enabled   //span[normalize-space()='${option}']     60
+    Click Element        //span[normalize-space()='${option}']
+#Sprache
 
+Select the relevant language
+    [Arguments]    ${option}
+    wait until element is visible   //div[normalize-space()='${option}']    60
+    wait until element is enabled   //div[normalize-space()='${option}']     60
+    Click Element        //div[normalize-space()='${option}']
+#English
 
+Enter the location
+    [Arguments]    ${option}        ${location}
+    wait until element is visible   ${search_location}    60
+    wait until element is enabled   ${search_location}     60
+    Click Element       ${search_location}
+    Clear Element Text      ${search_location}
+    input text      ${search_location}     ${location}
+
+Select the location
+    wait until element is visible   ${select_location}   60
+    wait until element is enabled   ${select_location}     60
+    Click Element        ${select_location}

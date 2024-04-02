@@ -8,27 +8,10 @@ Library         BuiltIn
 Library         random
 Library         DateTime
 Library         OperatingSystem
-Resource        ../Pages/Generic.robot
-Resource        ../Pages/DashboardPage.robot
-Resource        ../Pages/ITperformancePage.robot
-Resource        ../Pages/LandingPage.robot
-Resource        ../Pages/TechnologyPage.robot
-Resource        ../Pages/PartnersPage.robot
-Resource        ../Pages/RegisterMember.robot
-Resource        ../Pages/ContractsPage.robot
-Resource        ../Pages/LoginAPI.robot
-Resource        ../Pages/ReplaceDomainAPI.robot
-Resource        ../Pages/Yopmail.robot
-Resource        ../Pages/UserAccount.robot
-Resource        ../Pages/TwoFactorAuth.robot
-Resource        ../Pages/SubscriptionPage.robot
-Resource        ../Pages/MessagePage.robot
-Resource        ../Pages/LocationPage.robot
-Resource        ../Pages/MemberPage.robot
-Resource        ../Pages/ReportsPage.robot
-Resource        ../Pages/I_iconPage.robot
+Resource        ../Pages/HRSGeneric.robot
+Resource        ../Pages/HRSLandingPage.robot
 
-Suite Setup    Get Current Date and Time
+
 Test Setup      open the browser with the url
 Test Teardown   Close Browser session
 
@@ -40,5 +23,13 @@ ${Shop_page_load}           css:.nav-link
 
 *** Test Cases ***
 Validate Succesful Login
-    Generic.click on the tab	Login
-    LandingPage.Fill the login Form    ${email}    ${valid_password}
+    HRSLandingPage.Accept cookies
+    HRSLandingPage.Click on the menu option
+    HRSLandingPage.Click on change language option      Sprache
+    HRSLandingPage.Select the relevant language     English
+    HRSGeneric.Verify your current page location contains          language=en
+    HRSLandingPage.Enter the location      Barcelona Catalonia
+    HRSLandingPage.Select the location
+    HRSLandingPage.
+    HRSLandingPage.
+

@@ -8,45 +8,17 @@ Library           BuiltIn
 Library           random
 Library           DateTime
 Library           OperatingSystem
-Resource        ../Pages/Generic.robot
-Resource        ../Pages/DashboardPage.robot
-Resource        ../Pages/DepartmentPage.robot
-Resource        ../Pages/ITperformancePage.robot
-Resource        ../Pages/KeyClockPage.robot
-Resource        ../Pages/LandingPage.robot
-Resource        ../Pages/TechnologyPage.robot
-Resource        ../Pages/PartnersPage.robot
-Resource        ../Pages/ContractsPage.robot
-Resource        ../Pages/RegisterMember.robot
-Resource        ../Pages/RegisterUserPage.robot
-Resource        ../Pages/ReplaceDomainAPI.robot
-Resource        ../Pages/Yopmail.robot
-Resource        ../Pages/UserAccount.robot
-Resource        ../Pages/TwoFactorAuth.robot
-Resource        ../Pages/SubscriptionPage.robot
-Resource        ../Pages/TeamMemberPage.robot
-Resource        ../Pages/MessagePage.robot
-Resource        ../Pages/LocationPage.robot
-Resource        ../Pages/LoginAPI.robot
-Resource        ../Pages/MemberPage.robot
-Resource        ../Pages/OCS.robot
-Resource        ../Pages/BillingPage.robot
-Resource        ../Pages/ReportsPage.robot
-Resource        ../Pages/I_iconPage.robot
-Resource        ../Pages/SortingPage.robot
-Resource        ../Pages/Bulk_Import_ExportPage.robot
-
+Resource        ../Pages/HRSGeneric.robot
+Resource        ../Pages/HRSLandingPage.robot
 *** Variables ***
 
 
 
 ${url}                https://www.hrs.de/
-
-
 ${browser_name}          firefox
 
-${email}                 testqa29j@mailinator.com       #UAT user
-${valid_password}        Test!@5897
+${email}                 deepparamsingh@gmail.com       #UAT user
+${valid_password}        Qwer@2024
 
 
 ${SheetLocationAndName}   LoadTimeSheet.xlsx
@@ -114,22 +86,14 @@ click on the button link
     click element       //a[normalize-space()='${option}']
 
 open the browser with the url
-    Generic.Fix the column number
-    Generic.Fix the row number
-
-    ${StartTime1} =     Get Current Time in Milliseconds
     open browser    ${url}      ${browser_name}     #executable_path=E:/Aithentic/TestPage/resources
-    wait until element is visible    //a[normalize-space()='Login']     60
-    wait until element is enabled    //a[normalize-space()='Login']     60
+    wait until element is visible    css:#SearchHotelsButton     60
+    wait until element is enabled    css:#SearchHotelsButton     60
     Maximize Browser Window
-    ${EndTime1} =     Get Current Time in Milliseconds
-    ${ActualTime}         Evaluate     ${EndTime1}-${StartTime1}
-    Log to console   Current Time in Milliseconds: ${ActualTime}
-    Calculate Running time  2  ${pageHeading}   Generic - open the browser with the url     2    ${pageTime}     ${ActualTime}    Load_Time_tracking
 
 Get Current Date and Time
-    Generic.Fix the column number
-    Generic.Fix the row number
+    HRSGeneric.Fix the column number
+    HRSGeneric.Fix the row number
 
     ${current_date}=    Evaluate    datetime.datetime.now().strftime("%Y-%m-%d")
     ${current_time}=    Evaluate    datetime.datetime.now().strftime("%H:%M:%S")
@@ -219,7 +183,7 @@ Enter current date
     Wait Until Element Is Enabled     ${option}      60
     click element       ${option}
     Clear Element Text      ${option}
-    ${curentDate}=    Generic.Fetch Current Date
+    ${curentDate}=    HRSGeneric.Fetch Current Date
     input text  ${option}    ${curentDate}
 
 Enter self date
@@ -269,7 +233,7 @@ Enter phone number
     wait until element is enabled   ${contact_Country_search}       60
     click element   ${contact_Country_search}
     input text  ${contact_Country_search}   ${country}
-    Generic.Select parameter      ${code}
+    HRSGeneric.Select parameter      ${code}
     input text     ${phone}     ${phoneNo}
     Sleep    3
 
@@ -296,16 +260,8 @@ Click keyboard button
     [Arguments]     ${locator}      ${button}
     Press keys      ${locator}      ${button}
 
-Update settings for Asset_ID, employee_id and location
-    Generic.open the browser with the url
-    Generic.click on the tab	Login
-    LandingPage.Fill the login Form    ${email}    ${valid_password}
-    Generic.Click on the profile name
-    Generic.Select option from profile list     personal-details
-    I_iconPage.Choose options inside personal_details        Organization
-    I_iconPage.Choose tabs under organization        system
-    Generic.Verify your current page location contains     organization
-    DashboardPage.Select the employee ID checkbox   yes
-    DashboardPage.Select the location ID checkbox   yes
-    DashboardPage.Select the asset ID checkbox      no
-    close browser
+
+Scroll within the element
+    [Arguments]    ${option}
+    Execute JavaScript    document.querySelector('tbody tr:nth-child(${option}) td:nth-child(1)').scrollIntoView(true);
+    wait until element is visible       //td[normalize-space()='${option}']      60
