@@ -43,6 +43,11 @@ Book hotel room
     HRSLandingPage.Click on change language option      Sprache
     HRSLandingPage.Select the relevant language     English
     HRSGeneric.Verify your current page location contains          language=en
+    HRSLandingPage.Click on the login
+    HRSLandingPage.Enter email ID          deepparamsingh@gmail.com
+    HRSLandingPage.Enter password      Qwer@2024
+    HRSLandingPage.Click on login button
+    HRSLandingPage.Verify alert message     You have successfully been logged in.
     HRSLandingPage.Enter the location      Barcelona Catalonia
     HRSLandingPage.Select the location
     HRSLandingPage.Click on the datepicker
@@ -59,5 +64,8 @@ Book hotel room
     HRSDetailsPage.Choose the room
     HRSDetailsPage.Choose the first room appers in the list
     HRSGeneric.Verify your current page location contains       book
-    HRSGeneric.Verify your current page contains this text     Your contact details
-    sleep       5
+    HRSGeneric.Verify your current page contains this text     Your contact data
+    sleep       3
+    HRSDetailsPage.Select country code      +91
+    HRSDetailsPage.Enter Phone number       9646289871
+#    HRSDetailsPage.Mark the payment details checkbox
