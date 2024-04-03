@@ -10,7 +10,8 @@ Library         DateTime
 Library         OperatingSystem
 Resource        ../Pages/HRSGeneric.robot
 Resource        ../Pages/HRSLandingPage.robot
-
+Resource        ../Pages/HRSHotelListingPage.robot
+Resource        ../Pages/HRSDetailsPage.robot
 
 *** Variables ***
 ${Accept_all_cookies}      css:#onetrust-accept-btn-handler
@@ -34,6 +35,27 @@ ${next_month}       //div[contains(@class,'Calendar_monthsDesktop')]//img
 ${search_hotels}     //span[normalize-space()='Search hotels']
 
 *** Keywords ***
+Click on the login
+    wait until element is visible   ${login}     60
+    wait until element is enabled   ${login}     60
+    Click Element       ${login}
+
+Enter email ID
+    [Arguments]     ${email}
+    wait until element is visible   ${userEmail}    60
+    wait until element is enabled   ${userEmail}     60
+    input text      ${userEmail}   ${email}
+
+Enter password
+    [Arguments]     ${pass}
+    wait until element is visible   ${userPass}    60
+    wait until element is enabled   ${userPass}     60
+    input text      ${userPass}   ${pass}
+
+Click on login button
+    wait until element is visible  ${loginButton}     60
+    wait until element is enabled   ${loginButton}     60
+    Click Element       ${loginButton}
 
 
 Accept cookies
@@ -68,6 +90,7 @@ Enter the location
     Click Element       ${search_location}
     Clear Element Text      ${input_location}
     input text      ${input_location}    ${location}
+    sleep       ${search_sleep}
 
 Select the location
     wait until element is visible   ${select_location}   60
@@ -100,3 +123,10 @@ Click on search hotels
     wait until element is visible   ${search_hotels}   60
     wait until element is enabled   ${search_hotels}     60
     Click Element        ${search_hotels}
+
+Verify alert message
+    [Arguments]    ${option}
+    wait until element is visible   //div[normalize-space()='${option}']   60
+    wait until element is not visible   //div[normalize-space()='${option}']   60
+
+

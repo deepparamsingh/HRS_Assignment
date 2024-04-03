@@ -10,6 +10,7 @@ Library           DateTime
 Library           OperatingSystem
 Resource        ../Pages/HRSGeneric.robot
 Resource        ../Pages/HRSLandingPage.robot
+Resource        ../Pages/HRSDetailsPage.robot
 *** Variables ***
 
 
@@ -30,7 +31,7 @@ ${loaderIcon}     //div[@role='status']
 
 ${phone}     css:#phone
 
-${yop_sleep}       10
+${yop_sleep}       5
 ${search_sleep}       1
 #  Load_Time_tracking  Dropdown_LoadTime    Table_Load_Time    Search_Load_Time    UAT 15March
 
@@ -265,3 +266,7 @@ Scroll within the element
     [Arguments]    ${option}
     Execute JavaScript    document.querySelector('tbody tr:nth-child(${option}) td:nth-child(1)').scrollIntoView(true);
     wait until element is visible       //td[normalize-space()='${option}']      60
+
+
+
+Verify alert message
