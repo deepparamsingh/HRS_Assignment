@@ -18,7 +18,7 @@ Resource        ../Pages/HRSDetailsPage.robot
 ${chooseRoom_btn}      //div[contains(@class,'HeaderPrice_container')]//span[@data-test='SelectRoomButton_span']
 ${phone}         css:#phone
 ${chkBox}       css:#SmartPayCheckbox
-
+#//span[@id='SmartPayCheckbox']//following-sibling::label
 
 *** Keywords ***
 

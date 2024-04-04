@@ -22,18 +22,9 @@ ${email}                 deepparamsingh@gmail.com       #UAT user
 ${valid_password}        Qwer@2024
 
 
-${SheetLocationAndName}   LoadTimeSheet.xlsx
-${SheetTabName}     Load_Time_tracking
-
-${alert_Msg}     css:.msg.d-inline-flex
-
-${loaderIcon}     //div[@role='status']
-
-${phone}     css:#phone
-
 ${yop_sleep}       5
 ${search_sleep}       1
-#  Load_Time_tracking  Dropdown_LoadTime    Table_Load_Time    Search_Load_Time    UAT 15March
+
 
 *** Keywords ***
 Fix the column number
@@ -267,6 +258,3 @@ Scroll within the element
     Execute JavaScript    document.querySelector('tbody tr:nth-child(${option}) td:nth-child(1)').scrollIntoView(true);
     wait until element is visible       //td[normalize-space()='${option}']      60
 
-
-
-Verify alert message

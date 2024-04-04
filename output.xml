@@ -1,700 +1,877 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0 (Python 3.11.8 on win32)" generated="2024-04-03T16:58:34.729898" rpa="false" schemaversion="5">
+<robot generator="Robot 7.0 (Python 3.11.8 on win32)" generated="2024-04-04T09:28:53.407730" rpa="false" schemaversion="5">
 <suite id="s1" name="HRSLandingPageTest" source="D:\HRS\TestPage\HRSLandingPageTest.robot">
-<test id="s1-t1" name="Book hotel room" line="40">
+<test id="s1-t1" name="Validate succesful login" line="27">
 <kw name="open the browser with the url" owner="HRSGeneric" type="SETUP">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-04-03T16:58:35.311751" level="INFO">Opening browser 'firefox' to base url 'https://www.hrs.de/'.</msg>
+<msg time="2024-04-04T09:28:53.889401" level="INFO">Opening browser 'firefox' to base url 'https://www.hrs.de/'.</msg>
 <arg>${url}</arg>
 <arg>${browser_name}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-04-03T16:58:35.311751" elapsed="6.826053"/>
+<status status="PASS" start="2024-04-04T09:28:53.888406" elapsed="6.632817"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>css:#SearchHotelsButton</arg>
 <arg>60</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-04-03T16:58:42.138805" elapsed="0.048002"/>
+<status status="PASS" start="2024-04-04T09:29:00.521223" elapsed="0.045022"/>
 </kw>
 <kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
 <arg>css:#SearchHotelsButton</arg>
 <arg>60</arg>
 <doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" start="2024-04-03T16:58:42.186807" elapsed="0.019529"/>
+<status status="PASS" start="2024-04-04T09:29:00.566245" elapsed="0.022042"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-04-03T16:58:42.207346" elapsed="0.271593"/>
+<status status="PASS" start="2024-04-04T09:29:00.588287" elapsed="0.271954"/>
 </kw>
-<status status="PASS" start="2024-04-03T16:58:35.311751" elapsed="7.167188"/>
+<status status="PASS" start="2024-04-04T09:28:53.887355" elapsed="6.972886"/>
 </kw>
 <kw name="Accept cookies" owner="HRSLandingPage">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${Accept_all_cookies}</arg>
 <arg>60</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-04-03T16:58:42.479975" elapsed="0.621732"/>
+<status status="PASS" start="2024-04-04T09:29:00.861243" elapsed="2.257692"/>
 </kw>
 <kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
 <arg>${Accept_all_cookies}</arg>
 <arg>60</arg>
 <doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" start="2024-04-03T16:58:43.102783" elapsed="0.014922"/>
+<status status="PASS" start="2024-04-04T09:29:03.118935" elapsed="0.012963"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-04-03T16:58:43.118711" level="INFO">Clicking element 'css:#onetrust-accept-btn-handler'.</msg>
+<msg time="2024-04-04T09:29:03.131898" level="INFO">Clicking element 'css:#onetrust-accept-btn-handler'.</msg>
 <arg>${Accept_all_cookies}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-03T16:58:43.118711" elapsed="0.263291"/>
+<status status="PASS" start="2024-04-04T09:29:03.131898" elapsed="0.260462"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-04-03T16:58:44.383452" level="INFO">Slept 1 second.</msg>
+<msg time="2024-04-04T09:29:04.392543" level="INFO">Slept 1 second.</msg>
 <arg>${search_sleep}</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-04-03T16:58:43.383024" elapsed="1.000428"/>
+<status status="PASS" start="2024-04-04T09:29:03.392360" elapsed="1.000183"/>
 </kw>
-<status status="PASS" start="2024-04-03T16:58:42.479975" elapsed="1.903477"/>
+<status status="PASS" start="2024-04-04T09:29:00.861243" elapsed="3.531300"/>
 </kw>
 <kw name="Click on the menu option" owner="HRSLandingPage">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${hamBurger}</arg>
 <arg>60</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-04-03T16:58:44.385456" elapsed="0.013686"/>
+<status status="PASS" start="2024-04-04T09:29:04.393605" elapsed="0.014257"/>
 </kw>
 <kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
 <arg>${hamBurger}</arg>
 <arg>60</arg>
 <doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" start="2024-04-03T16:58:44.399142" elapsed="0.009924"/>
+<status status="PASS" start="2024-04-04T09:29:04.407862" elapsed="0.010859"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-04-03T16:58:44.410064" level="INFO">Clicking element '//img[@alt='menu']'.</msg>
+<msg time="2024-04-04T09:29:04.418721" level="INFO">Clicking element '//img[@alt='menu']'.</msg>
 <arg>${hamBurger}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-03T16:58:44.410064" elapsed="0.015990"/>
+<status status="PASS" start="2024-04-04T09:29:04.418721" elapsed="0.019662"/>
 </kw>
-<status status="PASS" start="2024-04-03T16:58:44.384463" elapsed="0.041591"/>
+<status status="PASS" start="2024-04-04T09:29:04.393605" elapsed="0.044778"/>
 </kw>
 <kw name="Click on change language option" owner="HRSLandingPage">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>//span[normalize-space()='${option}']</arg>
 <arg>60</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-04-03T16:58:44.427055" elapsed="0.442311"/>
+<status status="PASS" start="2024-04-04T09:29:04.439383" elapsed="0.436107"/>
 </kw>
 <kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
 <arg>//span[normalize-space()='${option}']</arg>
 <arg>60</arg>
 <doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" start="2024-04-03T16:58:44.869366" elapsed="0.010019"/>
+<status status="PASS" start="2024-04-04T09:29:04.875490" elapsed="0.013777"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-04-03T16:58:44.880386" level="INFO">Clicking element '//span[normalize-space()='Sprache']'.</msg>
+<msg time="2024-04-04T09:29:04.889267" level="INFO">Clicking element '//span[normalize-space()='Sprache']'.</msg>
 <arg>//span[normalize-space()='${option}']</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-03T16:58:44.880386" elapsed="0.213992"/>
+<status status="PASS" start="2024-04-04T09:29:04.889267" elapsed="0.218177"/>
 </kw>
 <arg>Sprache</arg>
-<status status="PASS" start="2024-04-03T16:58:44.427055" elapsed="0.667323"/>
+<status status="PASS" start="2024-04-04T09:29:04.439383" elapsed="0.668061"/>
 </kw>
 <kw name="Select the relevant language" owner="HRSLandingPage">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>//div[normalize-space()='${option}']</arg>
 <arg>60</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-04-03T16:58:45.095464" elapsed="0.011932"/>
+<status status="PASS" start="2024-04-04T09:29:05.108432" elapsed="0.012508"/>
 </kw>
 <kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
 <arg>//div[normalize-space()='${option}']</arg>
 <arg>60</arg>
 <doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" start="2024-04-03T16:58:45.107396" elapsed="0.011989"/>
+<status status="PASS" start="2024-04-04T09:29:05.120940" elapsed="0.013082"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-04-03T16:58:45.120399" level="INFO">Clicking element '//div[normalize-space()='English']'.</msg>
+<msg time="2024-04-04T09:29:05.134022" level="INFO">Clicking element '//div[normalize-space()='English']'.</msg>
 <arg>//div[normalize-space()='${option}']</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-03T16:58:45.119385" elapsed="0.673589"/>
+<status status="PASS" start="2024-04-04T09:29:05.134022" elapsed="0.577587"/>
 </kw>
 <arg>English</arg>
-<status status="PASS" start="2024-04-03T16:58:45.095464" elapsed="0.697510"/>
+<status status="PASS" start="2024-04-04T09:29:05.108432" elapsed="0.603177"/>
 </kw>
 <kw name="Verify your current page location contains" owner="HRSGeneric">
 <kw name="Wait Until Location Contains" owner="SeleniumLibrary">
 <arg>${verifyOption}</arg>
 <arg>60</arg>
 <doc>Waits until the current URL contains ``expected``.</doc>
-<status status="PASS" start="2024-04-03T16:58:45.793975" elapsed="0.002001"/>
+<status status="PASS" start="2024-04-04T09:29:05.712611" elapsed="0.003038"/>
 </kw>
 <arg>language=en</arg>
-<status status="PASS" start="2024-04-03T16:58:45.793975" elapsed="0.002001"/>
+<status status="PASS" start="2024-04-04T09:29:05.712611" elapsed="0.003038"/>
 </kw>
 <kw name="Click on the login" owner="HRSLandingPage">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${login}</arg>
 <arg>60</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-04-03T16:58:45.796972" elapsed="0.090003"/>
+<status status="PASS" start="2024-04-04T09:29:05.716607" elapsed="0.095293"/>
 </kw>
 <kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
 <arg>${login}</arg>
 <arg>60</arg>
 <doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" start="2024-04-03T16:58:45.886975" elapsed="0.017026"/>
+<status status="PASS" start="2024-04-04T09:29:05.812902" elapsed="0.014866"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-04-03T16:58:45.904001" level="INFO">Clicking element '//img[contains(@alt,'login')]//preceding-sibling::span'.</msg>
+<msg time="2024-04-04T09:29:05.827768" level="INFO">Clicking element '//img[contains(@alt,'login')]//preceding-sibling::span'.</msg>
 <arg>${login}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-03T16:58:45.904001" elapsed="0.246415"/>
+<status status="PASS" start="2024-04-04T09:29:05.827768" elapsed="0.251251"/>
 </kw>
-<status status="PASS" start="2024-04-03T16:58:45.796972" elapsed="0.353444"/>
+<status status="PASS" start="2024-04-04T09:29:05.715649" elapsed="0.364378"/>
 </kw>
 <kw name="Enter email ID" owner="HRSLandingPage">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${userEmail}</arg>
 <arg>60</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-04-03T16:58:46.152501" elapsed="0.013509"/>
+<status status="PASS" start="2024-04-04T09:29:06.081018" elapsed="0.017549"/>
 </kw>
 <kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
 <arg>${userEmail}</arg>
 <arg>60</arg>
 <doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" start="2024-04-03T16:58:46.166010" elapsed="0.013005"/>
+<status status="PASS" start="2024-04-04T09:29:06.098567" elapsed="0.012000"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-04-03T16:58:46.180016" level="INFO">Typing text 'deepparamsingh@gmail.com' into text field 'css:#email'.</msg>
+<msg time="2024-04-04T09:29:06.111569" level="INFO">Typing text 'deepparamsingh@gmail.com' into text field 'css:#email'.</msg>
 <arg>${userEmail}</arg>
 <arg>${email}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-03T16:58:46.179015" elapsed="0.044510"/>
+<status status="PASS" start="2024-04-04T09:29:06.111569" elapsed="0.054285"/>
 </kw>
 <arg>deepparamsingh@gmail.com</arg>
-<status status="PASS" start="2024-04-03T16:58:46.151416" elapsed="0.072109"/>
+<status status="PASS" start="2024-04-04T09:29:06.081018" elapsed="0.084836"/>
 </kw>
 <kw name="Enter password" owner="HRSLandingPage">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${userPass}</arg>
 <arg>60</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-04-03T16:58:46.224523" elapsed="0.011001"/>
+<status status="PASS" start="2024-04-04T09:29:06.166855" elapsed="0.014510"/>
 </kw>
 <kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
 <arg>${userPass}</arg>
 <arg>60</arg>
 <doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" start="2024-04-03T16:58:46.235524" elapsed="0.010998"/>
+<status status="PASS" start="2024-04-04T09:29:06.181365" elapsed="0.011999"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-04-03T16:58:46.247580" level="INFO">Typing text 'Qwer@2024' into text field 'css:#password'.</msg>
+<msg time="2024-04-04T09:29:06.194364" level="INFO">Typing text 'Qwer@2024' into text field 'css:#password'.</msg>
 <arg>${userPass}</arg>
 <arg>${pass}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-03T16:58:46.247580" elapsed="0.017944"/>
+<status status="PASS" start="2024-04-04T09:29:06.193364" elapsed="0.032000"/>
 </kw>
 <arg>Qwer@2024</arg>
-<status status="PASS" start="2024-04-03T16:58:46.224523" elapsed="0.041001"/>
+<status status="PASS" start="2024-04-04T09:29:06.166855" elapsed="0.058509"/>
 </kw>
 <kw name="Click on login button" owner="HRSLandingPage">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${loginButton}</arg>
 <arg>60</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-04-03T16:58:46.266535" elapsed="0.011994"/>
+<status status="PASS" start="2024-04-04T09:29:06.226363" elapsed="0.012000"/>
 </kw>
 <kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
 <arg>${loginButton}</arg>
 <arg>60</arg>
 <doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" start="2024-04-03T16:58:46.278529" elapsed="0.013101"/>
+<status status="PASS" start="2024-04-04T09:29:06.239365" elapsed="0.015038"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-04-03T16:58:46.291630" level="INFO">Clicking element '//button[contains(@class,'Button_Primary')]//span[normalize-space()='Log in']'.</msg>
+<msg time="2024-04-04T09:29:06.255414" level="INFO">Clicking element '//button[contains(@class,'Button_Primary')]//span[normalize-space()='Log in']'.</msg>
 <arg>${loginButton}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-03T16:58:46.291630" elapsed="0.480949"/>
+<status status="PASS" start="2024-04-04T09:29:06.255414" elapsed="0.445197"/>
 </kw>
-<status status="PASS" start="2024-04-03T16:58:46.266535" elapsed="0.506044"/>
+<status status="PASS" start="2024-04-04T09:29:06.226363" elapsed="0.474248"/>
 </kw>
 <kw name="Verify alert message" owner="HRSLandingPage">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>//div[normalize-space()='${option}']</arg>
 <arg>60</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-04-03T16:58:46.772579" elapsed="3.081682"/>
+<status status="PASS" start="2024-04-04T09:29:06.701668" elapsed="2.876355"/>
 </kw>
 <kw name="Wait Until Element Is Not Visible" owner="SeleniumLibrary">
 <arg>//div[normalize-space()='${option}']</arg>
 <arg>60</arg>
 <doc>Waits until the element ``locator`` is not visible.</doc>
-<status status="PASS" start="2024-04-03T16:58:49.854261" elapsed="3.871610"/>
+<status status="PASS" start="2024-04-04T09:29:09.579528" elapsed="4.067556"/>
 </kw>
 <arg>You have successfully been logged in.</arg>
-<status status="PASS" start="2024-04-03T16:58:46.772579" elapsed="6.954373"/>
+<status status="PASS" start="2024-04-04T09:29:06.701668" elapsed="6.945416"/>
+</kw>
+<kw name="Close Browser session" owner="HRSGeneric" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-04-04T09:29:13.649083" elapsed="2.718939"/>
+</kw>
+<status status="PASS" start="2024-04-04T09:29:13.648014" elapsed="2.720008"/>
+</kw>
+<status status="PASS" start="2024-04-04T09:28:53.886318" elapsed="22.482713"/>
+</test>
+<test id="s1-t2" name="Book hotel room" line="40">
+<kw name="open the browser with the url" owner="HRSGeneric" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-04-04T09:29:16.370031" level="INFO">Opening browser 'firefox' to base url 'https://www.hrs.de/'.</msg>
+<arg>${url}</arg>
+<arg>${browser_name}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-04-04T09:29:16.370031" elapsed="6.257490"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>css:#SearchHotelsButton</arg>
+<arg>60</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-04-04T09:29:22.627521" elapsed="0.038995"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>css:#SearchHotelsButton</arg>
+<arg>60</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2024-04-04T09:29:22.667518" elapsed="0.021002"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-04-04T09:29:22.688520" elapsed="0.280066"/>
+</kw>
+<status status="PASS" start="2024-04-04T09:29:16.370031" elapsed="6.598555"/>
+</kw>
+<kw name="Accept cookies" owner="HRSLandingPage">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Accept_all_cookies}</arg>
+<arg>60</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-04-04T09:29:22.969591" elapsed="2.464117"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${Accept_all_cookies}</arg>
+<arg>60</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2024-04-04T09:29:25.433708" elapsed="0.015992"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-04T09:29:25.449700" level="INFO">Clicking element 'css:#onetrust-accept-btn-handler'.</msg>
+<arg>${Accept_all_cookies}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-04T09:29:25.449700" elapsed="0.283675"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-04-04T09:29:26.734834" level="INFO">Slept 1 second.</msg>
+<arg>${search_sleep}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-04-04T09:29:25.733375" elapsed="1.001459"/>
+</kw>
+<status status="PASS" start="2024-04-04T09:29:22.969591" elapsed="3.765243"/>
+</kw>
+<kw name="Click on the menu option" owner="HRSLandingPage">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${hamBurger}</arg>
+<arg>60</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-04-04T09:29:26.735838" elapsed="0.024999"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${hamBurger}</arg>
+<arg>60</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2024-04-04T09:29:26.760837" elapsed="0.013510"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-04T09:29:26.775359" level="INFO">Clicking element '//img[@alt='menu']'.</msg>
+<arg>${hamBurger}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-04T09:29:26.774347" elapsed="0.017004"/>
+</kw>
+<status status="PASS" start="2024-04-04T09:29:26.734834" elapsed="0.056517"/>
+</kw>
+<kw name="Click on change language option" owner="HRSLandingPage">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//span[normalize-space()='${option}']</arg>
+<arg>60</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-04-04T09:29:26.792349" elapsed="0.436722"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>//span[normalize-space()='${option}']</arg>
+<arg>60</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2024-04-04T09:29:27.229071" elapsed="0.028954"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-04T09:29:27.258025" level="INFO">Clicking element '//span[normalize-space()='Sprache']'.</msg>
+<arg>//span[normalize-space()='${option}']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-04T09:29:27.258025" elapsed="0.231298"/>
+</kw>
+<arg>Sprache</arg>
+<status status="PASS" start="2024-04-04T09:29:26.791351" elapsed="0.697972"/>
+</kw>
+<kw name="Select the relevant language" owner="HRSLandingPage">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//div[normalize-space()='${option}']</arg>
+<arg>60</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-04-04T09:29:27.490324" elapsed="0.019506"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>//div[normalize-space()='${option}']</arg>
+<arg>60</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2024-04-04T09:29:27.509830" elapsed="0.017000"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-04T09:29:27.527832" level="INFO">Clicking element '//div[normalize-space()='English']'.</msg>
+<arg>//div[normalize-space()='${option}']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-04T09:29:27.527832" elapsed="0.577569"/>
+</kw>
+<arg>English</arg>
+<status status="PASS" start="2024-04-04T09:29:27.490324" elapsed="0.615077"/>
+</kw>
+<kw name="Verify your current page location contains" owner="HRSGeneric">
+<kw name="Wait Until Location Contains" owner="SeleniumLibrary">
+<arg>${verifyOption}</arg>
+<arg>60</arg>
+<doc>Waits until the current URL contains ``expected``.</doc>
+<status status="PASS" start="2024-04-04T09:29:28.106400" elapsed="0.003000"/>
+</kw>
+<arg>language=en</arg>
+<status status="PASS" start="2024-04-04T09:29:28.106400" elapsed="0.004002"/>
+</kw>
+<kw name="Click on the login" owner="HRSLandingPage">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${login}</arg>
+<arg>60</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-04-04T09:29:28.110402" elapsed="0.139366"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${login}</arg>
+<arg>60</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2024-04-04T09:29:28.250769" elapsed="0.021254"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-04T09:29:28.272023" level="INFO">Clicking element '//img[contains(@alt,'login')]//preceding-sibling::span'.</msg>
+<arg>${login}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-04T09:29:28.272023" elapsed="0.261029"/>
+</kw>
+<status status="PASS" start="2024-04-04T09:29:28.110402" elapsed="0.422650"/>
+</kw>
+<kw name="Enter email ID" owner="HRSLandingPage">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${userEmail}</arg>
+<arg>60</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-04-04T09:29:28.534083" elapsed="0.015967"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${userEmail}</arg>
+<arg>60</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2024-04-04T09:29:28.550050" elapsed="0.017005"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-04-04T09:29:28.568127" level="INFO">Typing text 'deepparamsingh@gmail.com' into text field 'css:#email'.</msg>
+<arg>${userEmail}</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-04T09:29:28.568127" elapsed="0.054089"/>
+</kw>
+<arg>deepparamsingh@gmail.com</arg>
+<status status="PASS" start="2024-04-04T09:29:28.534083" elapsed="0.088133"/>
+</kw>
+<kw name="Enter password" owner="HRSLandingPage">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${userPass}</arg>
+<arg>60</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-04-04T09:29:28.623215" elapsed="0.018999"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${userPass}</arg>
+<arg>60</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2024-04-04T09:29:28.643214" elapsed="0.015000"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-04-04T09:29:28.659215" level="INFO">Typing text 'Qwer@2024' into text field 'css:#password'.</msg>
+<arg>${userPass}</arg>
+<arg>${pass}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-04T09:29:28.659215" elapsed="0.045913"/>
+</kw>
+<arg>Qwer@2024</arg>
+<status status="PASS" start="2024-04-04T09:29:28.623215" elapsed="0.081913"/>
+</kw>
+<kw name="Click on login button" owner="HRSLandingPage">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${loginButton}</arg>
+<arg>60</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-04-04T09:29:28.706120" elapsed="0.011010"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${loginButton}</arg>
+<arg>60</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2024-04-04T09:29:28.717130" elapsed="0.025000"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-04T09:29:28.743120" level="INFO">Clicking element '//button[contains(@class,'Button_Primary')]//span[normalize-space()='Log in']'.</msg>
+<arg>${loginButton}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-04T09:29:28.742130" elapsed="0.435688"/>
+</kw>
+<status status="PASS" start="2024-04-04T09:29:28.706120" elapsed="0.472626"/>
+</kw>
+<kw name="Verify alert message" owner="HRSLandingPage">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//div[normalize-space()='${option}']</arg>
+<arg>60</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-04-04T09:29:29.178746" elapsed="2.881052"/>
+</kw>
+<kw name="Wait Until Element Is Not Visible" owner="SeleniumLibrary">
+<arg>//div[normalize-space()='${option}']</arg>
+<arg>60</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" start="2024-04-04T09:29:32.059798" elapsed="3.866468"/>
+</kw>
+<arg>You have successfully been logged in.</arg>
+<status status="PASS" start="2024-04-04T09:29:29.178746" elapsed="6.747520"/>
 </kw>
 <kw name="Enter the location" owner="HRSLandingPage">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${search_location}</arg>
 <arg>60</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-04-03T16:58:53.727159" elapsed="0.010096"/>
+<status status="PASS" start="2024-04-04T09:29:35.927355" elapsed="0.008907"/>
 </kw>
 <kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
 <arg>${search_location}</arg>
 <arg>60</arg>
 <doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" start="2024-04-03T16:58:53.737255" elapsed="0.011569"/>
+<status status="PASS" start="2024-04-04T09:29:35.936262" elapsed="0.011503"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-04-03T16:58:53.749837" level="INFO">Clicking element 'css:span[title='Location, hotel, region, address, post code']'.</msg>
+<msg time="2024-04-04T09:29:35.947765" level="INFO">Clicking element 'css:span[title='Location, hotel, region, address, post code']'.</msg>
 <arg>${search_location}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-03T16:58:53.748824" elapsed="0.241049"/>
+<status status="PASS" start="2024-04-04T09:29:35.947765" elapsed="0.250024"/>
 </kw>
 <kw name="Clear Element Text" owner="SeleniumLibrary">
 <arg>${input_location}</arg>
 <doc>Clears the value of the text-input-element identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-03T16:58:53.989873" elapsed="0.006316"/>
+<status status="PASS" start="2024-04-04T09:29:36.197789" elapsed="0.004915"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-04-03T16:58:53.997261" level="INFO">Typing text 'Barcelona Catalonia' into text field 'css:#DestinationSearchInput'.</msg>
+<msg time="2024-04-04T09:29:36.203773" level="INFO">Typing text 'Barcelona Catalonia' into text field 'css:#DestinationSearchInput'.</msg>
 <arg>${input_location}</arg>
 <arg>${location}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-03T16:58:53.997261" elapsed="0.059432"/>
+<status status="PASS" start="2024-04-04T09:29:36.202704" elapsed="0.051748"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-04-03T16:58:55.058490" level="INFO">Slept 1 second.</msg>
+<msg time="2024-04-04T09:29:37.254758" level="INFO">Slept 1 second.</msg>
 <arg>${search_sleep}</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-04-03T16:58:54.056693" elapsed="1.001797"/>
+<status status="PASS" start="2024-04-04T09:29:36.254452" elapsed="1.000306"/>
 </kw>
 <arg>Barcelona Catalonia</arg>
-<status status="PASS" start="2024-04-03T16:58:53.727159" elapsed="1.331331"/>
+<status status="PASS" start="2024-04-04T09:29:35.926266" elapsed="1.328492"/>
 </kw>
 <kw name="Select the location" owner="HRSLandingPage">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${select_location}</arg>
 <arg>60</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-04-03T16:58:55.060889" elapsed="0.013991"/>
+<status status="PASS" start="2024-04-04T09:29:37.256771" elapsed="0.018387"/>
 </kw>
 <kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
 <arg>${select_location}</arg>
 <arg>60</arg>
 <doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" start="2024-04-03T16:58:55.074880" elapsed="0.012071"/>
+<status status="PASS" start="2024-04-04T09:29:37.275158" elapsed="0.011092"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-04-03T16:58:55.086951" level="INFO">Clicking element '(//li[contains(@class,'DestinationList_suggestionItem')])[1]'.</msg>
+<msg time="2024-04-04T09:29:37.287235" level="INFO">Clicking element '(//li[contains(@class,'DestinationList_suggestionItem')])[1]'.</msg>
 <arg>${select_location}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-03T16:58:55.086951" elapsed="0.253048"/>
+<status status="PASS" start="2024-04-04T09:29:37.287235" elapsed="0.246004"/>
 </kw>
-<status status="PASS" start="2024-04-03T16:58:55.059880" elapsed="0.280119"/>
+<status status="PASS" start="2024-04-04T09:29:37.255773" elapsed="0.277466"/>
 </kw>
 <kw name="Click on the datepicker" owner="HRSLandingPage">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${date_Picker}</arg>
 <arg>60</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-04-03T16:58:55.342111" elapsed="0.011336"/>
+<status status="PASS" start="2024-04-04T09:29:37.534227" elapsed="0.016270"/>
 </kw>
 <kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
 <arg>${date_Picker}</arg>
 <arg>60</arg>
 <doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" start="2024-04-03T16:58:55.353447" elapsed="0.011242"/>
+<status status="PASS" start="2024-04-04T09:29:37.550497" elapsed="0.011007"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-04-03T16:58:55.364689" level="INFO">Clicking element 'css:#DatePickerOpener'.</msg>
+<msg time="2024-04-04T09:29:37.562588" level="INFO">Clicking element 'css:#DatePickerOpener'.</msg>
 <arg>${date_Picker}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-03T16:58:55.364689" elapsed="0.251445"/>
+<status status="PASS" start="2024-04-04T09:29:37.561504" elapsed="0.256085"/>
 </kw>
-<status status="PASS" start="2024-04-03T16:58:55.341103" elapsed="0.275031"/>
+<status status="PASS" start="2024-04-04T09:29:37.534227" elapsed="0.284450"/>
 </kw>
 <kw name="Click next month to find date" owner="HRSLandingPage">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${next_month}</arg>
 <arg>60</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-04-03T16:58:55.617134" elapsed="0.011997"/>
+<status status="PASS" start="2024-04-04T09:29:37.819666" elapsed="0.014578"/>
 </kw>
 <kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
 <arg>${next_month}</arg>
 <arg>60</arg>
 <doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" start="2024-04-03T16:58:55.629131" elapsed="0.013182"/>
+<status status="PASS" start="2024-04-04T09:29:37.834244" elapsed="0.011243"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-04-03T16:58:55.642313" level="INFO">Clicking element '//div[contains(@class,'Calendar_monthsDesktop')]//img'.</msg>
+<msg time="2024-04-04T09:29:37.846567" level="INFO">Clicking element '//div[contains(@class,'Calendar_monthsDesktop')]//img'.</msg>
 <arg>${next_month}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-03T16:58:55.642313" elapsed="0.238386"/>
+<status status="PASS" start="2024-04-04T09:29:37.845487" elapsed="0.235233"/>
 </kw>
-<status status="PASS" start="2024-04-03T16:58:55.617134" elapsed="0.264565"/>
+<status status="PASS" start="2024-04-04T09:29:37.819666" elapsed="0.261054"/>
 </kw>
 <kw name="Select Start date of the month" owner="HRSLandingPage">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>//div[contains(@class, 'Calendar_monthsDesktop')]//div[contains(@class, 'Month_container')]//div[contains(@class, 'Month_title')and contains(text(), '${month}')]//following::div[contains(@class,'Day_container')and contains(text(), '${date}')]</arg>
 <arg>60</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-04-03T16:58:55.883509" elapsed="0.013320"/>
+<status status="PASS" start="2024-04-04T09:29:38.081726" elapsed="0.017625"/>
 </kw>
 <kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
 <arg>//div[contains(@class, 'Calendar_monthsDesktop')]//div[contains(@class, 'Month_container')]//div[contains(@class, 'Month_title')and contains(text(), '${month}')]//following::div[contains(@class,'Day_container')and contains(text(), '${date}')]</arg>
 <arg>60</arg>
 <doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" start="2024-04-03T16:58:55.896829" elapsed="0.012966"/>
+<status status="PASS" start="2024-04-04T09:29:38.099351" elapsed="0.011908"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-04-03T16:58:55.909795" level="INFO">Clicking element '//div[contains(@class, 'Calendar_monthsDesktop')]//div[contains(@class, 'Month_container')]//div[contains(@class, 'Month_title')and contains(text(), 'June')]//following::div[contains(@class,'Day_container')and contains(text(), '21')]'.</msg>
+<msg time="2024-04-04T09:29:38.111259" level="INFO">Clicking element '//div[contains(@class, 'Calendar_monthsDesktop')]//div[contains(@class, 'Month_container')]//div[contains(@class, 'Month_title')and contains(text(), 'June')]//following::div[contains(@class,'Day_container')and contains(text(), '21')]'.</msg>
 <arg>//div[contains(@class, 'Calendar_monthsDesktop')]//div[contains(@class, 'Month_container')]//div[contains(@class, 'Month_title')and contains(text(), '${month}')]//following::div[contains(@class,'Day_container')and contains(text(), '${date}')]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-03T16:58:55.909795" elapsed="0.227982"/>
+<status status="PASS" start="2024-04-04T09:29:38.111259" elapsed="0.228476"/>
 </kw>
 <arg>June</arg>
 <arg>21</arg>
-<status status="PASS" start="2024-04-03T16:58:55.882501" elapsed="0.255276"/>
+<status status="PASS" start="2024-04-04T09:29:38.081726" elapsed="0.259039"/>
 </kw>
 <kw name="Select end date of the month" owner="HRSLandingPage">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>//div[contains(@class, 'Calendar_monthsDesktop')]//div[contains(@class, 'Month_container')]//div[contains(@class, 'Month_title')and contains(text(), '${month}')]//following::div[contains(@class,'Day_container')and contains(text(), '${date}')]</arg>
 <arg>60</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-04-03T16:58:56.138869" elapsed="0.009740"/>
+<status status="PASS" start="2024-04-04T09:29:38.341762" elapsed="0.013464"/>
 </kw>
 <kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
 <arg>//div[contains(@class, 'Calendar_monthsDesktop')]//div[contains(@class, 'Month_container')]//div[contains(@class, 'Month_title')and contains(text(), '${month}')]//following::div[contains(@class,'Day_container')and contains(text(), '${date}')]</arg>
 <arg>60</arg>
 <doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" start="2024-04-03T16:58:56.148609" elapsed="0.010089"/>
+<status status="PASS" start="2024-04-04T09:29:38.356322" elapsed="0.010939"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-04-03T16:58:56.159697" level="INFO">Clicking element '//div[contains(@class, 'Calendar_monthsDesktop')]//div[contains(@class, 'Month_container')]//div[contains(@class, 'Month_title')and contains(text(), 'June')]//following::div[contains(@class,'Day_container')and contains(text(), '26')]'.</msg>
+<msg time="2024-04-04T09:29:38.368203" level="INFO">Clicking element '//div[contains(@class, 'Calendar_monthsDesktop')]//div[contains(@class, 'Month_container')]//div[contains(@class, 'Month_title')and contains(text(), 'June')]//following::div[contains(@class,'Day_container')and contains(text(), '26')]'.</msg>
 <arg>//div[contains(@class, 'Calendar_monthsDesktop')]//div[contains(@class, 'Month_container')]//div[contains(@class, 'Month_title')and contains(text(), '${month}')]//following::div[contains(@class,'Day_container')and contains(text(), '${date}')]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-03T16:58:56.159697" elapsed="0.238577"/>
+<status status="PASS" start="2024-04-04T09:29:38.367261" elapsed="0.241789"/>
 </kw>
 <arg>June</arg>
 <arg>26</arg>
-<status status="PASS" start="2024-04-03T16:58:56.137777" elapsed="0.260497"/>
+<status status="PASS" start="2024-04-04T09:29:38.341762" elapsed="0.267288"/>
 </kw>
 <kw name="Click on search hotels" owner="HRSLandingPage">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${search_hotels}</arg>
 <arg>60</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-04-03T16:58:56.399875" elapsed="0.014410"/>
+<status status="PASS" start="2024-04-04T09:29:38.610051" elapsed="0.015017"/>
 </kw>
 <kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
 <arg>${search_hotels}</arg>
 <arg>60</arg>
 <doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" start="2024-04-03T16:58:56.414285" elapsed="0.010163"/>
+<status status="PASS" start="2024-04-04T09:29:38.625068" elapsed="0.012653"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-04-03T16:58:56.425527" level="INFO">Clicking element '//span[normalize-space()='Search hotels']'.</msg>
+<msg time="2024-04-04T09:29:38.637721" level="INFO">Clicking element '//span[normalize-space()='Search hotels']'.</msg>
 <arg>${search_hotels}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-03T16:58:56.424448" elapsed="0.289167"/>
+<status status="PASS" start="2024-04-04T09:29:38.637721" elapsed="0.315388"/>
 </kw>
-<status status="PASS" start="2024-04-03T16:58:56.399286" elapsed="0.314329"/>
+<status status="PASS" start="2024-04-04T09:29:38.610051" elapsed="0.343058"/>
 </kw>
 <kw name="Verify your current page location contains" owner="HRSGeneric">
 <kw name="Wait Until Location Contains" owner="SeleniumLibrary">
 <arg>${verifyOption}</arg>
 <arg>60</arg>
 <doc>Waits until the current URL contains ``expected``.</doc>
-<status status="PASS" start="2024-04-03T16:58:56.714616" elapsed="0.001999"/>
+<status status="PASS" start="2024-04-04T09:29:38.953516" elapsed="0.001005"/>
 </kw>
 <arg>Recommendations</arg>
-<status status="PASS" start="2024-04-03T16:58:56.713615" elapsed="0.003000"/>
+<status status="PASS" start="2024-04-04T09:29:38.953516" elapsed="0.002003"/>
 </kw>
 <kw name="Enter room price" owner="HRSHotelListingPage">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${price_input}</arg>
 <arg>60</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-04-03T16:58:56.717617" elapsed="2.500156"/>
+<status status="PASS" start="2024-04-04T09:29:38.955519" elapsed="2.607056"/>
 </kw>
 <kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
 <arg>${price_input}</arg>
 <arg>60</arg>
 <doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" start="2024-04-03T16:58:59.217773" elapsed="0.024001"/>
+<status status="PASS" start="2024-04-04T09:29:41.562575" elapsed="0.031001"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-04-03T16:58:59.241774" level="INFO">Typing text '60' into text field 'css:#priceInput'.</msg>
+<msg time="2024-04-04T09:29:41.593576" level="INFO">Typing text '60' into text field 'css:#priceInput'.</msg>
 <arg>${price_input}</arg>
 <arg>${price}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-03T16:58:59.241774" elapsed="0.171769"/>
+<status status="PASS" start="2024-04-04T09:29:41.593576" elapsed="0.167295"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-04-03T16:59:00.414116" level="INFO">Slept 1 second.</msg>
+<msg time="2024-04-04T09:29:42.761422" level="INFO">Slept 1 second.</msg>
 <arg>${search_sleep}</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-04-03T16:58:59.413543" elapsed="1.000573"/>
+<status status="PASS" start="2024-04-04T09:29:41.760871" elapsed="1.000551"/>
 </kw>
 <arg>60</arg>
-<status status="PASS" start="2024-04-03T16:58:56.716615" elapsed="3.697501"/>
+<status status="PASS" start="2024-04-04T09:29:38.955519" elapsed="3.805903"/>
 </kw>
 <kw name="Select hotel room" owner="HRSHotelListingPage">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>(//span[normalize-space()='Hotel details'])[1]</arg>
 <arg>60</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-04-03T16:59:00.414116" elapsed="0.018011"/>
+<status status="PASS" start="2024-04-04T09:29:42.762522" elapsed="0.013004"/>
 </kw>
 <kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
 <arg>(//span[normalize-space()='Hotel details'])[1]</arg>
 <arg>60</arg>
 <doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" start="2024-04-03T16:59:00.432127" elapsed="0.012073"/>
+<status status="PASS" start="2024-04-04T09:29:42.776605" elapsed="0.013930"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-04-03T16:59:00.444200" level="INFO">Clicking element '(//span[normalize-space()='Hotel details'])[1]'.</msg>
+<msg time="2024-04-04T09:29:42.791549" level="INFO">Clicking element '(//span[normalize-space()='Hotel details'])[1]'.</msg>
 <arg>(//span[normalize-space()='Hotel details'])[1]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-03T16:59:00.444200" elapsed="0.403453"/>
+<status status="PASS" start="2024-04-04T09:29:42.791549" elapsed="0.412104"/>
 </kw>
-<status status="PASS" start="2024-04-03T16:59:00.414116" elapsed="0.433537"/>
+<status status="PASS" start="2024-04-04T09:29:42.762522" elapsed="0.441131"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-04-03T16:59:05.847962" level="INFO">Slept 5 seconds.</msg>
+<msg time="2024-04-04T09:29:48.204927" level="INFO">Slept 5 seconds.</msg>
 <arg>${yop_sleep}</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-04-03T16:59:00.847653" elapsed="5.000309"/>
+<status status="PASS" start="2024-04-04T09:29:43.204654" elapsed="5.000273"/>
 </kw>
 <kw name="Switch Window" owner="SeleniumLibrary">
 <arg>Bcnsporthostels</arg>
 <doc>Switches to browser window matching ``locator``.</doc>
-<status status="PASS" start="2024-04-03T16:59:05.847962" elapsed="0.052719"/>
+<status status="PASS" start="2024-04-04T09:29:48.206041" elapsed="0.052683"/>
 </kw>
 <kw name="Verify your current page location contains" owner="HRSGeneric">
 <kw name="Wait Until Location Contains" owner="SeleniumLibrary">
 <arg>${verifyOption}</arg>
 <arg>60</arg>
 <doc>Waits until the current URL contains ``expected``.</doc>
-<status status="PASS" start="2024-04-03T16:59:05.901680" elapsed="0.001001"/>
+<status status="PASS" start="2024-04-04T09:29:48.259725" elapsed="0.004013"/>
 </kw>
 <arg>detail</arg>
-<status status="PASS" start="2024-04-03T16:59:05.901680" elapsed="0.001001"/>
+<status status="PASS" start="2024-04-04T09:29:48.258724" elapsed="0.005014"/>
 </kw>
 <kw name="Choose the room" owner="HRSDetailsPage">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${chooseRoom_btn}</arg>
 <arg>60</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-04-03T16:59:05.903693" elapsed="0.013547"/>
+<status status="PASS" start="2024-04-04T09:29:48.264728" elapsed="0.011997"/>
 </kw>
 <kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
 <arg>${chooseRoom_btn}</arg>
 <arg>60</arg>
 <doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" start="2024-04-03T16:59:05.917240" elapsed="0.013745"/>
+<status status="PASS" start="2024-04-04T09:29:48.277726" elapsed="0.012536"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-04-03T16:59:05.930985" level="INFO">Clicking element '//div[contains(@class,'HeaderPrice_container')]//span[@data-test='SelectRoomButton_span']'.</msg>
+<msg time="2024-04-04T09:29:48.290262" level="INFO">Clicking element '//div[contains(@class,'HeaderPrice_container')]//span[@data-test='SelectRoomButton_span']'.</msg>
 <arg>${chooseRoom_btn}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-03T16:59:05.930985" elapsed="0.227117"/>
+<status status="PASS" start="2024-04-04T09:29:48.290262" elapsed="0.224676"/>
 </kw>
-<status status="PASS" start="2024-04-03T16:59:05.902681" elapsed="0.255421"/>
+<status status="PASS" start="2024-04-04T09:29:48.264728" elapsed="0.250210"/>
 </kw>
 <kw name="Choose the first room appers in the list" owner="HRSDetailsPage">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>(//span[normalize-space()='Book now'])[1]</arg>
 <arg>60</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-04-03T16:59:06.159102" elapsed="0.011250"/>
+<status status="PASS" start="2024-04-04T09:29:48.514938" elapsed="0.011078"/>
 </kw>
 <kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
 <arg>(//span[normalize-space()='Book now'])[1]</arg>
 <arg>60</arg>
 <doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" start="2024-04-03T16:59:06.171367" elapsed="0.012806"/>
+<status status="PASS" start="2024-04-04T09:29:48.526016" elapsed="0.012753"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-04-03T16:59:06.184173" level="INFO">Clicking element '(//span[normalize-space()='Book now'])[1]'.</msg>
+<msg time="2024-04-04T09:29:48.539774" level="INFO">Clicking element '(//span[normalize-space()='Book now'])[1]'.</msg>
 <arg>(//span[normalize-space()='Book now'])[1]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-03T16:59:06.184173" elapsed="0.303826"/>
+<status status="PASS" start="2024-04-04T09:29:48.538769" elapsed="0.289069"/>
 </kw>
-<status status="PASS" start="2024-04-03T16:59:06.159102" elapsed="0.329897"/>
+<status status="PASS" start="2024-04-04T09:29:48.514938" elapsed="0.312900"/>
 </kw>
 <kw name="Verify your current page location contains" owner="HRSGeneric">
 <kw name="Wait Until Location Contains" owner="SeleniumLibrary">
 <arg>${verifyOption}</arg>
 <arg>60</arg>
 <doc>Waits until the current URL contains ``expected``.</doc>
-<status status="PASS" start="2024-04-03T16:59:06.489997" elapsed="0.002006"/>
+<status status="PASS" start="2024-04-04T09:29:48.828967" elapsed="0.001999"/>
 </kw>
 <arg>book</arg>
-<status status="PASS" start="2024-04-03T16:59:06.488999" elapsed="0.003004"/>
+<status status="PASS" start="2024-04-04T09:29:48.827838" elapsed="0.003128"/>
 </kw>
 <kw name="Verify your current page contains this text" owner="HRSGeneric">
 <kw name="Wait Until Page Contains" owner="SeleniumLibrary">
 <arg>${verifyOption}</arg>
 <arg>60</arg>
 <doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" start="2024-04-03T16:59:06.493002" elapsed="0.056515"/>
+<status status="PASS" start="2024-04-04T09:29:48.831965" elapsed="0.014000"/>
 </kw>
 <arg>Your contact data</arg>
-<status status="PASS" start="2024-04-03T16:59:06.492003" elapsed="0.057514"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-04-03T16:59:09.549873" level="INFO">Slept 3 seconds.</msg>
-<arg>3</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-04-03T16:59:06.549517" elapsed="3.000356"/>
+<status status="PASS" start="2024-04-04T09:29:48.831965" elapsed="0.014000"/>
 </kw>
 <kw name="Select country code" owner="HRSDetailsPage">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>css:#phoneCode</arg>
 <arg>60</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-04-03T16:59:09.549873" elapsed="0.011399"/>
+<status status="PASS" start="2024-04-04T09:29:48.845965" elapsed="0.069010"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-04-03T16:59:09.562272" level="INFO">Clicking element 'css:#phoneCode'.</msg>
+<msg time="2024-04-04T09:29:48.915978" level="INFO">Clicking element 'css:#phoneCode'.</msg>
 <arg>css:#phoneCode</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-03T16:59:09.561272" elapsed="0.255400"/>
+<status status="PASS" start="2024-04-04T09:29:48.915978" elapsed="0.256196"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>//li[@id='${code}']</arg>
 <arg>60</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-04-03T16:59:09.816672" elapsed="0.012999"/>
+<status status="PASS" start="2024-04-04T09:29:49.172174" elapsed="0.013021"/>
 </kw>
 <kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
 <arg>//li[@id='${code}']</arg>
 <arg>60</arg>
 <doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" start="2024-04-03T16:59:09.829671" elapsed="0.013613"/>
+<status status="PASS" start="2024-04-04T09:29:49.185195" elapsed="0.014026"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-04-03T16:59:09.843284" level="INFO">Clicking element '//li[@id='+91']'.</msg>
+<msg time="2024-04-04T09:29:49.200222" level="INFO">Clicking element '//li[@id='+91']'.</msg>
 <arg>//li[@id='${code}']</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-03T16:59:09.843284" elapsed="0.237996"/>
+<status status="PASS" start="2024-04-04T09:29:49.200222" elapsed="0.226052"/>
 </kw>
 <arg>+91</arg>
-<status status="PASS" start="2024-04-03T16:59:09.549873" elapsed="0.532358"/>
+<status status="PASS" start="2024-04-04T09:29:48.845965" elapsed="0.580309"/>
 </kw>
 <kw name="Enter Phone number" owner="HRSDetailsPage">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${phone}</arg>
 <arg>60</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-04-03T16:59:10.082231" elapsed="0.013000"/>
+<status status="PASS" start="2024-04-04T09:29:49.427779" elapsed="0.011412"/>
 </kw>
 <kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
 <arg>${phone}</arg>
 <arg>60</arg>
 <doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" start="2024-04-03T16:59:10.095231" elapsed="0.011331"/>
+<status status="PASS" start="2024-04-04T09:29:49.439191" elapsed="0.015230"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-04-03T16:59:10.106562" level="INFO">Typing text '9646289871' into text field 'css:#phone'.</msg>
+<msg time="2024-04-04T09:29:49.455424" level="INFO">Typing text '9646289871' into text field 'css:#phone'.</msg>
 <arg>${phone}</arg>
 <arg>${phn}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-03T16:59:10.106562" elapsed="0.038510"/>
+<status status="PASS" start="2024-04-04T09:29:49.454421" elapsed="0.042036"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-04-03T16:59:11.145439" level="INFO">Slept 1 second.</msg>
+<msg time="2024-04-04T09:29:50.496560" level="INFO">Slept 1 second.</msg>
 <arg>${search_sleep}</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-04-03T16:59:10.145072" elapsed="1.000367"/>
+<status status="PASS" start="2024-04-04T09:29:49.496457" elapsed="1.000103"/>
 </kw>
 <arg>9646289871</arg>
-<status status="PASS" start="2024-04-03T16:59:10.082231" elapsed="1.063208"/>
-</kw>
-<kw name="Mark the payment details checkbox" owner="HRSDetailsPage">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${chkBox}</arg>
-<arg>60</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-04-03T16:59:11.146458" elapsed="0.012416"/>
-</kw>
-<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
-<arg>${chkBox}</arg>
-<arg>60</arg>
-<doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" start="2024-04-03T16:59:11.159973" elapsed="0.010599"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-04-03T16:59:11.170572" level="INFO">Clicking element 'css:#SmartPayCheckbox'.</msg>
-<msg time="2024-04-03T16:59:11.220445" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-6.png"&gt;&lt;img src="selenium-screenshot-6.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg time="2024-04-03T16:59:11.220445" level="FAIL">ElementClickInterceptedException: Message: Element &lt;span id="SmartPayCheckbox" class="Checkbox_checkmark__L5fTe"&gt; is not clickable at point (170,572) because another element &lt;div class="Checkbox_checkmarkAndLabel__arNY_"&gt; obscures it
-Stacktrace:
-RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8
-WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:192:5
-ElementClickInterceptedError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:336:5
-webdriverClickElement@chrome://remote/content/marionette/interaction.sys.mjs:176:11
-interaction.clickElement@chrome://remote/content/marionette/interaction.sys.mjs:135:11
-clickElement@chrome://remote/content/marionette/actors/MarionetteCommandsChild.sys.mjs:204:29
-receiveMessage@chrome://remote/content/marionette/actors/MarionetteCommandsChild.sys.mjs:84:31
-</msg>
-<arg>${chkBox}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="FAIL" start="2024-04-03T16:59:11.170572" elapsed="0.054666">ElementClickInterceptedException: Message: Element &lt;span id="SmartPayCheckbox" class="Checkbox_checkmark__L5fTe"&gt; is not clickable at point (170,572) because another element &lt;div class="Checkbox_checkmarkAndLabel__arNY_"&gt; obscures it
-Stacktrace:
-RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8
-WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:192:5
-ElementClickInterceptedError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:336:5
-webdriverClickElement@chrome://remote/content/marionette/interaction.sys.mjs:176:11
-interaction.clickElement@chrome://remote/content/marionette/interaction.sys.mjs:135:11
-clickElement@chrome://remote/content/marionette/actors/MarionetteCommandsChild.sys.mjs:204:29
-receiveMessage@chrome://remote/content/marionette/actors/MarionetteCommandsChild.sys.mjs:84:31
-</status>
-</kw>
-<status status="FAIL" start="2024-04-03T16:59:11.146458" elapsed="0.078780">ElementClickInterceptedException: Message: Element &lt;span id="SmartPayCheckbox" class="Checkbox_checkmark__L5fTe"&gt; is not clickable at point (170,572) because another element &lt;div class="Checkbox_checkmarkAndLabel__arNY_"&gt; obscures it
-Stacktrace:
-RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8
-WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:192:5
-ElementClickInterceptedError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:336:5
-webdriverClickElement@chrome://remote/content/marionette/interaction.sys.mjs:176:11
-interaction.clickElement@chrome://remote/content/marionette/interaction.sys.mjs:135:11
-clickElement@chrome://remote/content/marionette/actors/MarionetteCommandsChild.sys.mjs:204:29
-receiveMessage@chrome://remote/content/marionette/actors/MarionetteCommandsChild.sys.mjs:84:31
-</status>
+<status status="PASS" start="2024-04-04T09:29:49.426274" elapsed="1.070286"/>
 </kw>
 <kw name="Close Browser session" owner="HRSGeneric" type="TEARDOWN">
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-04-03T16:59:11.226456" elapsed="2.887389"/>
+<status status="PASS" start="2024-04-04T09:29:50.496560" elapsed="2.985604"/>
 </kw>
-<status status="PASS" start="2024-04-03T16:59:11.226456" elapsed="2.887389"/>
+<status status="PASS" start="2024-04-04T09:29:50.496560" elapsed="2.985604"/>
 </kw>
-<status status="FAIL" start="2024-04-03T16:58:35.311751" elapsed="38.802094">ElementClickInterceptedException: Message: Element &lt;span id="SmartPayCheckbox" class="Checkbox_checkmark__L5fTe"&gt; is not clickable at point (170,572) because another element &lt;div class="Checkbox_checkmarkAndLabel__arNY_"&gt; obscures it
-Stacktrace:
-RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8
-WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:192:5
-ElementClickInterceptedError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:336:5
-webdriverClickElement@chrome://remote/content/marionette/interaction.sys.mjs:176:11
-interaction.clickElement@chrome://remote/content/marionette/interaction.sys.mjs:135:11
-clickElement@chrome://remote/content/marionette/actors/MarionetteCommandsChild.sys.mjs:204:29
-receiveMessage@chrome://remote/content/marionette/actors/MarionetteCommandsChild.sys.mjs:84:31
-</status>
+<status status="PASS" start="2024-04-04T09:29:16.370031" elapsed="37.112133"/>
 </test>
 <doc>Contains all test cases of Landing page</doc>
-<status status="FAIL" start="2024-04-03T16:58:34.729898" elapsed="39.383947"/>
+<status status="PASS" start="2024-04-04T09:28:53.409733" elapsed="60.073429"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="1" skip="0">All Tests</stat>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="0" fail="1" skip="0" id="s1" name="HRSLandingPageTest">HRSLandingPageTest</stat>
+<stat pass="2" fail="0" skip="0" id="s1" name="HRSLandingPageTest">HRSLandingPageTest</stat>
 </suite>
 </statistics>
 <errors>

@@ -65,7 +65,5 @@ Book hotel room
     HRSDetailsPage.Choose the first room appers in the list
     HRSGeneric.Verify your current page location contains       book
     HRSGeneric.Verify your current page contains this text     Your contact data
-    sleep       3
     HRSDetailsPage.Select country code      +91
     HRSDetailsPage.Enter Phone number       9646289871
-#    HRSDetailsPage.Mark the payment details checkbox
