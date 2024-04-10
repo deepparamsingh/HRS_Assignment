@@ -14,7 +14,7 @@ Resource        ../Pages/HRSHotelListingPage.robot
 Resource        ../Pages/HRSDetailsPage.robot
 
 *** Variables ***
-${Accept_all_cookies}      css:#onetrust-accept-btn-handler
+${Accept_all_cookies}      //button[@id='onetrust-accept-btn-handler']
 ${Cookies_settings}      css:#onetrust-pc-btn-handler
 ${login}        //img[contains(@alt,'login')]//preceding-sibling::span
 ${userEmail}        css:#email

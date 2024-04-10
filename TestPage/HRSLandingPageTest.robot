@@ -25,7 +25,7 @@ ${Shop_page_load}           //div[normalize-space()='You have successfully been 
 
 *** Test Cases ***
 Validate succesful login
-    HRSLandingPage.Accept cookies
+#    HRSLandingPage.Accept cookies
     HRSLandingPage.Click on the menu option
     HRSLandingPage.Click on change language option      Sprache
     HRSLandingPage.Select the relevant language     English
@@ -38,7 +38,7 @@ Validate succesful login
 
 
 Book hotel room
-    HRSLandingPage.Accept cookies
+#    HRSLandingPage.Accept cookies
     HRSLandingPage.Click on the menu option
     HRSLandingPage.Click on change language option      Sprache
     HRSLandingPage.Select the relevant language     English

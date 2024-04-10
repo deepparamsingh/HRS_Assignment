@@ -79,9 +79,18 @@ click on the button link
 
 open the browser with the url
     open browser    ${url}      ${browser_name}     #executable_path=E:/Aithentic/TestPage/resources
+    HRSGeneric.Accept cookies
     wait until element is visible    css:#SearchHotelsButton     60
     wait until element is enabled    css:#SearchHotelsButton     60
     Maximize Browser Window
+
+
+
+Accept cookies
+    wait until element is visible   ${Accept_all_cookies}    60
+    wait until element is enabled    ${Accept_all_cookies}    60
+    Click Element       ${Accept_all_cookies}
+    sleep   ${search_sleep}
 
 Get Current Date and Time
     HRSGeneric.Fix the column number
