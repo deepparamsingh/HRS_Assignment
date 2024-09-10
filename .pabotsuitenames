@@ -1,0 +1,8 @@
+datasources:8ba16f40b773557bc5656760edd7dfb758a183d2
+commandlineoptions:65f95c924ba97541f47949701c4e3c51192a5b43
+suitesfrom:no-suites-from-option
+file:94f691be288a60329773fc921d1e695d5e631ead
+--test TestPage.HRSLandingPageTest.Validate succesful login
+--test TestPage.HRSLandingPageTest.Book hotel room
+--test TestPage.HRSLandingPageTest 1.Validate succesful login_1
+--test TestPage.HRSLandingPageTest 1.Book hotel room_1
